@@ -11,10 +11,14 @@
     - You can modify the /debug location if desired.
 
 # If you want to skip building
-- Pull the image from lldb-netcore:<tag>
+- Pull the image from `docker pull edisga/lldb-netcore:<tag>`
 
 # How to use lldb
-- Comming soon...
+1. You can run `dotnet-symbol /dump/coredump.xxxx` to download the symbols.
+2. If not self contained run `lldb --core core_XXXX dotnet`, if yes run `lldb --core core_XXXX <Library.dll>`
+3. Once the dump is loaded, then run `setsymbolserver -directory /debug` to set the symbols folder inside lldb.
+4. Run `loadsymbols` command
+
 
 # How to use dotnet diagnostic tools
 - Comming soon...
