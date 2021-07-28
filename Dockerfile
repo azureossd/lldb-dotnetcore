@@ -8,10 +8,6 @@ RUN apt-get update; \
     dpkg -i packages-microsoft-prod.deb; \
     rm packages-microsoft-prod.deb;
 
-# Installing git and cloning repository for command std output
-RUN apt-get install -y git; \
-    cd /tmp && git clone https://github.com/edisga/lldb-write.git
-
 # Installing dotnetcore SDK
 RUN apt-get update; \
   apt-get install -y apt-transport-https && \
