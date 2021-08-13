@@ -11,9 +11,6 @@
 - Build the image and run the container attaching the volume with your dumps location: `docker run -it -v c:/debugging/:/debug lldb-netcore:3.1`
     - You can modify the /debug location if desired.
 
-# If you want to skip building
-- Pull the image from `docker pull edisga/lldb-netcore:<tag>`
-
 # How to use lldb
 1. You can run `dotnet-symbol /dump/coredump.xxxx` to download the symbols.
 2. If not self contained run `lldb --core core_XXXX dotnet`, if yes run `lldb --core core_XXXX <Library.dll>`
